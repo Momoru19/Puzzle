@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Observer Portal</title>
+<style>
+body {
+  background: black;
+  color: lime;
+  font-family: monospace;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>OBSERVER SYSTEM</h1>
+
+<p id="msg"></p>
+
+<script>
+let hour = new Date().getHours();
+
+if(hour >= 0 && hour < 6){
+  document.getElementById("msg").innerText = "You are early...";
+}
+else if(hour >= 6 && hour < 18){
+  document.getElementById("msg").innerText = "You are being watched.";
+}
+else{
+  document.getElementById("msg").innerText = "The system is awake.";
+}
+</script>
+
+</body>
+</html>
